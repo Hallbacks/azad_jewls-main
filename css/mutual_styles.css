@@ -1,0 +1,279 @@
+/* DEFAULT STYLE */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5b5959;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1,h2 {
+  font-variant: small-caps;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+@font-face {
+  font-family: nfsfont;
+  src: url(nfsfont.ttf);
+}
+
+@font-face {
+  font-family: MolendRegular-MVD6p;
+  src: url(MolendRegular-MVD6p.ttf);
+}
+
+@font-face {
+  font-family: AntiDesignEndeavourDemo-7BLrK;
+  src: url(AntiDesignEndeavourDemo-7BLrK.ttf);
+}
+
+@font-face {
+  font-family: StanderdfreeRegular-X3KK2;
+  src: url(StanderdfreeRegular-X3KK2.ttf);
+}
+
+
+/* HEADER */
+header {
+  background-image: url(../img/azadhead.png);
+  background-size: cover;
+  font-family: MolendRegular-MVD6p;
+  font-size: 2cqw;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* HEADER LOGO */
+
+#head_logo {
+  width: 10%;
+  background-image: url(../img/azad.png);
+}
+
+/* NAVIGATIONSMENU */
+li {
+  list-style: none;
+}
+
+a {
+  color: #990000;
+  text-decoration: none;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: white;
+}
+
+/* .nav_item {
+    background-image: url(../img/COLOURBOX2749136.jpg);
+    border-radius: 30%;
+  } */
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav_menu {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.head_link{
+  color: #990000;
+}
+
+.head_link:hover,
+.foot_link:hover,
+.under_li_nav:hover,
+.under_li:hover,
+.content_link:hover{
+  color:darkblue;
+  transition: 0.7s ease;
+}
+
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #990000;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+  main {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* navbar styles */
+  .nav_menu {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  /*main styles */
+  main {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /*navbar styles */
+  .nav_menu {
+    /* flex-direction: column; */
+    position: fixed;
+    overflow: hidden;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    font-size: 2em;
+  }
+
+  .nav_item {
+    margin: 16px 0;
+    background-image:url(../img/silk_liquid.png);
+    border-radius: 50%;
+  }
+
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav_menu.active {
+    left: 0;
+  }
+
+  .grid-container2 {
+    display:list-item;
+    grid-template-columns: 1fr 1f;    
+  }
+
+}
+
+/* FOOTER */
+footer {
+  background-image: url(../img/leather.png);
+  background-size: cover;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom:  1em;
+  margin-bottom: 0;
+  font-variant: small-caps;
+  opacity: 70%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.foot_link {
+  color: #ffffff;
+  transition: 0.7s ease;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.col-lg-6,
+.col-md-6 {
+  margin-top: 2em;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+
+.copy {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+}
+
+.copy p {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .col-lg-6,
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* FOOTER LOGO */
+#foot_logo {
+  width: 10%;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 50%;
+}
+
+.nav-logo {
+  display: inline-block;
+}
+
+.nav-logo img {
+  vertical-align: middle;
+}
